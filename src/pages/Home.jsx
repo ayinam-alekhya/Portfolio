@@ -6,7 +6,7 @@ import { AboutMe } from "../components/AboutMe"
 import { Skills } from "../components/Skills"
 import { Projects } from "../components/Projects"
 import{ Contact } from "../components/Contact"
-import { Footer } from "../components/footer"
+import { Footer } from "../components/Footer"
 import { Certification } from "../components/Certifications"
 import { Education } from "../components/Education"
 
