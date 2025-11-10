@@ -10,7 +10,7 @@ cosmic starry background, and interactive sections to showcase my
 ## 🚀 Live Demo
 
 🔗 **[Visit
-Portfolio](https://portfolio-mocha-zeta-j35bzg6zcy.vercel.app)**\
+Portfolio](https://portfolio-silk-nu-80.vercel.app)**\
 Deployed seamlessly on **Vercel**.
 
 ------------------------------------------------------------------------
