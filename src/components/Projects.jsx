@@ -8,7 +8,6 @@ const projects = [
       "Instagram-style vertical reels with scroll-snap, autoplay in-view, likes/saves, and partner video uploads using Multer + ImageKit. Mobile-first UI with JWT auth.",
     image: "/projects/project1.png",
     tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "ImageKit", "Multer"],
-    // demoUrl: "https://your-demo-link.com",
     githubUrl: "https://github.com/ayinam-alekhya/Mini-Food-Reels",
   },
   {
@@ -18,7 +17,6 @@ const projects = [
       "FOON-based task-tree generation with IDS/A* and Monte Carlo Tree Search. Demonstrates planning/reasoning pipelines for robotic manipulation tasks.",
     image: "/projects/project2.png",
     tags: ["Python", "FOON", "A*", "IDS", "MCTS", "AI"],
-    // demoUrl: "https://your-demo-link.com",
     githubUrl: "https://github.com/ayinam-alekhya/Knowledge_Retrieval_Task_Tree_Generation",
   },
   {
@@ -28,7 +26,6 @@ const projects = [
       "Compute DDI indices and AKI risk via ROR and Apriori rules. Upload datasets, run analytics, and review results in a lightweight Flask UI.",
     image: "/projects/project3.png",
     tags: ["Python", "Flask", "Pandas", "NumPy", "Apriori", "ROR"],
-    // demoUrl: "https://your-demo-link.com",
     githubUrl: "https://github.com/ayinam-alekhya/FDA-DDI-index-calculation",
   },
   {
@@ -38,8 +35,16 @@ const projects = [
       "Multiclass Chest X-ray classifier (Normal/Pneumonia/TB) using ResNet50. Simple Flask front-end for image upload and real-time predictions.",
     image: "/projects/project4.png",
     tags: ["TensorFlow", "Keras", "Flask", "Deep Learning", "ResNet50", "CV"],
-    // demoUrl: "https://colab.research.google.com/github/ayinam-alekhya/Detection-Pneumonia-Tuberculosis/blob/main/MajorPro.ipynb",
     githubUrl: "https://github.com/ayinam-alekhya/Detection-Pneumonia-Tuberculosis",
+  },
+  {
+    id: 5,
+    title: "RentPal – Property Rental Management System",
+    description:
+      "Full-stack Java project with Spring Boot backend (REST APIs) and JavaFX frontend. Enables owners and tenants to manage properties, payments, and complaints via modern UI.",
+    image: "/projects/project5.png",
+    tags: ["Java", "Spring Boot", "JavaFX", "SQLite", "REST API", "Gradle", "Maven"],
+    githubUrl: "https://github.com/ayinam-alekhya/Rentpal",
   },
 ];
 
@@ -51,7 +56,6 @@ const Tag = ({ children }) => (
 
 const ProjectCard = ({ project }) => (
   <article className="group gradient-border rounded-lg overflow-hidden card-hover h-full flex flex-col">
-    {/* Image */}
     <div className="relative aspect-[16/10] overflow-hidden">
       <img
         src={project.image}
@@ -62,7 +66,6 @@ const ProjectCard = ({ project }) => (
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-background/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </div>
 
-    {/* Body */}
     <div className="p-6 flex flex-col text-left">
       <div className="flex flex-wrap gap-2 mb-4">
         {project.tags.map((tag) => (
@@ -74,25 +77,9 @@ const ProjectCard = ({ project }) => (
         {project.title}
       </h3>
 
-      <p className="text-sm text-foreground/70 mb-5">
-        {project.description}
-      </p>
+      <p className="text-sm text-foreground/70 mb-5">{project.description}</p>
 
       <div className="mt-auto flex items-center gap-3">
-        {/* Demo button (for future) */}
-        {/* {project.demoUrl && (
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cosmic-button inline-flex items-center gap-2"
-            aria-label={`Open live demo of ${project.title}`}
-          >
-            <ExternalLink className="h-4 w-4" />
-            <span>Live</span>
-          </a>
-        )} */}
-
         <a
           href={project.githubUrl}
           target="_blank"
@@ -119,14 +106,12 @@ export const Projects = () => {
           Explore selected work across full-stack web apps, AI search, and analytics.
         </p>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((p) => (
             <ProjectCard key={p.id} project={p} />
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <a
             href="https://github.com/ayinam-alekhya"
